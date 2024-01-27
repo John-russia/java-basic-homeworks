@@ -11,8 +11,6 @@ public class Application {
         }
     }
 
-    ;
-
     // Метод принимает целочисленный массив и суммирует его элементы, значение которых больше 5.
     public static void sumOfArrayElementsBigger5(int[] arr) {
         int sum = 0;
@@ -22,10 +20,7 @@ public class Application {
             }
         }
         System.out.println("Сумма элементов массива " + Arrays.toString(arr) + ", превышающих 5, равна: " + sum);
-
     }
-
-    ;
 
     // Метод, заполняющий массив указанным числом.
     public static void arrayFullfilment(int[] arr, int n) {
@@ -33,10 +28,7 @@ public class Application {
             arr[i] = n;
         }
         System.out.println("Заполненный массив" + Arrays.toString(arr));
-
     }
-
-    ;
 
     // Метод, увеличивающий каждый элемент массива на указанное число.
     public static void arrayEveryElementPlusN(int[] arr, int n) {
@@ -44,10 +36,7 @@ public class Application {
             arr[i] += n;
         }
         System.out.println("Измененный массив" + Arrays.toString(arr));
-
     }
-
-    ;
 
     // Метод, сумма первой или второй половины больше. Подразумеваем, что количество элементов чётное.
     public static void arrayPartsComparison(int[] arr) {
@@ -66,26 +55,18 @@ public class Application {
         } else {
             System.out.println("Суммы элементов в левой и правой части массива равны");
         }
-        ;
-
     }
-
-    ;
 
     public static void main(String[] args) {
         printStringNtimes("Пчела - молодец, она делает мёд", 5);
         System.out.println();
-
         sumOfArrayElementsBigger5(new int[]{1, 2, 3, 5, 6, 10});
         System.out.println();
-
         int[] arr1 = {1, 2, 3, 5, 6, 10};
         arrayFullfilment(arr1, 5);
         System.out.println();
-
         arrayEveryElementPlusN(arr1, 5);
         System.out.println();
-
         arrayPartsComparison(new int[]{1, 3, 3, 1, 3, 4});
     }
 }

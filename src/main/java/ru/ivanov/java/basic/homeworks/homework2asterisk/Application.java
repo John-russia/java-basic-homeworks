@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Application {
 
     // Метод определяет количество элементов самого длинного массива (вспомогательный)
-    static int maxArrayLength(int[]... arrays) {
+    public static int maxArrayLength(int[]... arrays) {
         int maxLength = 0;
         for (int[] array : arrays) {
             if (array.length > maxLength) {
@@ -29,7 +29,7 @@ public class Application {
     }
 
     // Метод, находящий сумму элементов массива. (вспомогательный)
-    static int arrayElementsSum(int[] arr) {
+    public static int arrayElementsSum(int[] arr) {
         int sum = 0;
         for (int j : arr) {
             sum += j;
@@ -37,19 +37,14 @@ public class Application {
         return sum;
     }
 
-    ;
-
     // Метод, делящий массив на 2 в после n-ного элемента. (не нужен, удалить)
     static Object[] splitArray(int[] arr, int n) {
         int[] arr1 = new int[n + 1];
         int[] arr2 = new int[arr.length - (n + 1)];
         System.arraycopy(arr, 0, arr1, 0, n + 1);
         System.arraycopy(arr, n + 1, arr2, 0, arr.length - (n + 1));
-
         return new Object[]{arr1, arr2};
     }
-
-    ;
 
     // Метод распечатка двух частей (вспомогательный)
     public static void prettyPrint(int[] arr1, int[] arr2) {
@@ -62,7 +57,6 @@ public class Application {
             System.out.print(arr2[i] + ", ");
         }
         System.out.print(arr2[arr2.length - 1] + "}");
-
     }
 
     //     Метод, находящий точку, в которой сумма левой и правой массива части равны. (ДЗ п.2)
@@ -82,8 +76,6 @@ public class Application {
         if (!marker) {
             System.out.println(Arrays.toString(arr));  //Жаль, что нет for else...
         }
-        ;
-
     }
 
     // Метод, проверяющий, что все элементы массива идут в порядке убывания (вспомогательный).
@@ -100,9 +92,7 @@ public class Application {
         } else {
             System.out.println("Элементы массива НЕ идут в порядке убывания");
         }
-        ;
     }
-
 
     // Метод, проверяющий, что все элементы массива идут в порядке возрастания (вспомогательный).
     public static void arrayElementsAreIncreasing(int[] arr) {
@@ -118,9 +108,7 @@ public class Application {
         } else {
             System.out.println("Элементы массива НЕ идут в порядке возрастания");
         }
-        ;
     }
-
 
     // Метод, проверяющий, что все элементы массива идут в порядке убывания или возрастания - по выбору пользователя (ДЗ п.3).
     public static void arrayEncreaseDecrease(int[] arr) {
@@ -132,9 +120,6 @@ public class Application {
         } else if (choice == 2) {
             arrayElementsAreIncreasing(arr);
         } else System.out.println("Выбор неверный");
-
-        ;
-
     }
 
     // Метод,  “переворачивающий” входящий массив (ДЗ п.4).
@@ -144,10 +129,9 @@ public class Application {
         for (int i = 0; i < arr.length; i++) {
             arrTmp[i] = arr[arr.length - 1 - i];
         }
-        arr = arrTmp; // По заданию вроде как всё-таки надо исходный массив переделать
+        arr = arrTmp;
         System.out.println("Перевернутый массив -> " + Arrays.toString(arr));
     }
-
 
     public static void main(String[] args) {
         int[] array1 = {1, 2, 3};
@@ -157,13 +141,11 @@ public class Application {
         int[] array5 = {5, 3, 4, -2};
         int[] array6 = {7, 2, 2, 2};
 
-//        sumArrays(array1, array2, array3);
-//        System.out.println();
-//        arrayPartsComparison(array4);
-//        System.out.println();
-//        arrayEncreaseDecrease(array6);
-
+        sumArrays(array1, array2, array3);
+        System.out.println();
+        arrayPartsComparison(array4);
+        System.out.println();
+        arrayEncreaseDecrease(array5);
         arrayReverse(array6);
-
     }
 }
