@@ -4,14 +4,12 @@ import java.util.Arrays;
 
 public class Application {
 
-    // Метод печатает строку "inputString" n раз.
     public static void printStringNtimes(String inputString, int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(inputString);
         }
     }
 
-    // Метод принимает целочисленный массив и суммирует его элементы, значение которых больше 5.
     public static void sumOfArrayElementsBigger5(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -22,7 +20,6 @@ public class Application {
         System.out.println("Сумма элементов массива " + Arrays.toString(arr) + ", превышающих 5, равна: " + sum);
     }
 
-    // Метод, заполняющий массив указанным числом.
     public static void arrayFullfilment(int[] arr, int n) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = n;
@@ -30,7 +27,6 @@ public class Application {
         System.out.println("Заполненный массив" + Arrays.toString(arr));
     }
 
-    // Метод, увеличивающий каждый элемент массива на указанное число.
     public static void arrayEveryElementPlusN(int[] arr, int n) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] += n;
@@ -38,7 +34,6 @@ public class Application {
         System.out.println("Измененный массив" + Arrays.toString(arr));
     }
 
-    // Метод, сумма первой или второй половины больше. Подразумеваем, что количество элементов чётное.
     public static void arrayPartsComparison(int[] arr) {
         int sumPart1 = 0;
         int sumPart2 = 0;
