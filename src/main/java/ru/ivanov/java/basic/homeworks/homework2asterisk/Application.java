@@ -59,7 +59,7 @@ public class Application {
         System.out.print(arr2[arr2.length - 1] + "}");
     }
 
-    //     Метод, находящий точку, в которой сумма левой и правой массива части равны. (ДЗ п.2)
+    // Метод, находящий точку, в которой сумма левой и правой массива части равны. (ДЗ п.2)
     public static void arrayPartsComparison(int[] arr) {
         boolean marker = false;
         for (int i = 0; i < arr.length - 1; i++) {
@@ -74,7 +74,7 @@ public class Application {
             }
         }
         if (!marker) {
-            System.out.println(Arrays.toString(arr));  //Жаль, что нет for else...
+            System.out.println(Arrays.toString(arr));
         }
     }
 
@@ -82,7 +82,7 @@ public class Application {
     public static void arrayElementsAreDecreasing(int[] arr) {
         boolean marker = true;
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] < arr[i + 1]) {   //здесь решил сделать мягкое условие с "=", вроде при равных значениях можно сказать, что ряд убывающий, просто убывание нулевое))
+            if (arr[i] < arr[i + 1]) {
                 marker = false;
                 break;
             }
@@ -98,7 +98,7 @@ public class Application {
     public static void arrayElementsAreIncreasing(int[] arr) {
         boolean marker = true;
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i + 1]) {   //здесь решил сделать мягкое условие с "=", вроде при равных значениях можно сказать, что ряд возрастающий, просто возрастание нулевое))
+            if (arr[i] > arr[i + 1]) {
                 marker = false;
                 break;
             }
