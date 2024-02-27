@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Horse extends Transport {
     private int power;
     private int powerConsumption = 2;
-    private TerrainTypes[] restrictedTerrainTypes = {TerrainTypes.valueOf("болото")};
+    private TerrainTypes[] restrictedTerrainTypes = {TerrainTypes.SWAMP};
 
     public Horse(String name, int power) {
         super(name);
@@ -20,7 +20,7 @@ public class Horse extends Transport {
     @Override
     public boolean drive(int distance, TerrainTypes terrainTypes) {
         if (Arrays.asList(restrictedTerrainTypes).contains(terrainTypes)) {
-            System.out.println("На лошади нельзя перемещаться по типу местности: " + terrainTypes);
+            System.out.println("На лошади нельзя перемещаться по типу местности: " + terrainTypes.getType());
             return false;
         }
         if (power / powerConsumption >= distance) {

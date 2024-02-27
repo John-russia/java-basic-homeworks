@@ -9,23 +9,23 @@ public class Application {
         Transport bike = new Bicycle("велосипед");
         Transport horse = new Horse("лошадь", 100);
         man.info();
-        System.out.println(man.move(10, TerrainTypes.равнина));
+        System.out.println(man.move(10, TerrainTypes.PLAIN));
         man.info();
         man.setCurrentTransport(car);
         man.info();
         car.info();
-        System.out.println(man.move(100, TerrainTypes.болото));
-        System.out.println(man.move(10, TerrainTypes.равнина));
+        System.out.println(man.move(100, TerrainTypes.SWAMP));
+        System.out.println(man.move(10, TerrainTypes.PLAIN));
         car.info();
         man.setCurrentTransport(offRoader);
-        System.out.println(man.move(10, TerrainTypes.болото));
+        System.out.println(man.move(10, TerrainTypes.SWAMP));
         offRoader.info();
         man.setCurrentTransport(bike);
-        System.out.println(man.move(10, TerrainTypes.болото));
-        System.out.println(man.move(10, TerrainTypes.густой_лес));
+        System.out.println(man.move(10, TerrainTypes.SWAMP));
+        System.out.println(man.move(10, TerrainTypes.DENSE_FOREST));
         man.setCurrentTransport(horse);
-        System.out.println(man.move(10, TerrainTypes.болото));
-        System.out.println(man.move(100, TerrainTypes.равнина));
+        System.out.println(man.move(10, TerrainTypes.SWAMP));
+        System.out.println(man.move(100, TerrainTypes.PLAIN));
         horse.info();
 
 

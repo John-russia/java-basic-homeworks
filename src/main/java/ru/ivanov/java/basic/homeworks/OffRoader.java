@@ -18,7 +18,7 @@ public class OffRoader extends Transport {
     public boolean drive(int distance, TerrainTypes terrainTypes) {
         if (fuelQuantity / fuelConsumption >= distance) {
             fuelQuantity -= distance * fuelConsumption;
-            System.out.println("Перемещение на ТС: " + name + " по типу местности: " + terrainTypes + " на расстояние: " + distance);
+            System.out.println("Перемещение на ТС: " + name + " по типу местности: " + terrainTypes.getType() + " на расстояние: " + distance);
             return true;
         }
         System.out.println("На перемещение не хватит топлива!");
