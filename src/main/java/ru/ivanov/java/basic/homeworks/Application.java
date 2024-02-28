@@ -32,8 +32,8 @@ public class Application {
         return outList;
     }
 
-    public static Integer sumOverFiveNumbers(ArrayList<Integer> inputList) {
-        Integer result = 0;
+    public static int sumOverFiveNumbers(ArrayList<Integer> inputList) {
+        int result = 0;
         for (Integer i : inputList) {
             if (i > 5) {
                 result += i;
